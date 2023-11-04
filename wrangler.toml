@@ -1,0 +1,7 @@
+name = "clouded"
+main = "src/index.ts"
+compatibility_date = "2023-08-15"
+
+[vars]
+DKIM_DOMAIN = "foldr.in"
+AUTH_TOKEN = ""

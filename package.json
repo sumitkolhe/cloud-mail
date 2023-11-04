@@ -1,0 +1,28 @@
+{
+  "name": "clouded",
+  "version": "1.0.0",
+  "private": false,
+  "license": "MIT",
+  "repository": "https://github.com/sumitkolhe/clouded.git",
+  "author": "Sumit Kolhe",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "wrangler dev",
+    "start": "wrangler dev --remote",
+    "deploy": "wrangler deploy",
+    "format": "prettier --write .",
+    "lint": "eslint ./src --ext .ts",
+    "lint:fix": "eslint ./src --ext .ts --fix"
+  },
+  "dependencies": {
+    "hono": "^3.9.1",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@kolhe/eslint-config": "^1.2.6",
+    "eslint": "^8.52.0",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2",
+    "wrangler": "^3.15.0"
+  }
+}
