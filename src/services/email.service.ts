@@ -14,9 +14,9 @@ export class EmailService {
     })
 
     return {
-      status: response.status === 202 ? 'SUCCESS' : 'ERROR',
+      success: response.status >= 200 && response.status <= 299 ? true : false,
       message:
-        response.statusText === 'Accepted' ? 'Email sent' : response.statusText,
+        response.statusText === 'Accepted' ? 'email sent' : response.statusText,
     }
   }
 
