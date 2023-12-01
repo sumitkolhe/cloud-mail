@@ -14,9 +14,11 @@ export class EmailService {
     })
 
     return {
-      success: response.status >= 200 && response.status <= 299 ? true : false,
+      success: response.ok ? true : false,
       message:
-        response.statusText === 'Accepted' ? 'email sent' : response.statusText,
+        response.statusText === 'Accepted'
+          ? 'email sent'
+          : await response.text(),
     }
   }
 
